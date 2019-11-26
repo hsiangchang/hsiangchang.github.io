@@ -80,9 +80,9 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="HSIANG&#39;s Blog">
+<meta property="og:title" content="HsiangTaipei&#39;s Blog">
 <meta property="og:url" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;index.html">
-<meta property="og:site_name" content="HSIANG&#39;s Blog">
+<meta property="og:site_name" content="HsiangTaipei&#39;s Blog">
 <meta property="og:locale" content="zh-tw">
 <meta name="twitter:card" content="summary">
 
@@ -120,7 +120,7 @@
 
 
 
-  <title>HSIANG's Blog</title>
+  <title>HsiangTaipei's Blog</title>
   
 
 
@@ -151,7 +151,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">HSIANG's Blog</span>
+        <span class="site-title">HsiangTaipei's Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -248,7 +248,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hsiangchang.github.io/2019/11/23/jeedynamicweb/">
+    <link itemprop="mainEntityOfPage" href="https://hsiangchang.github.io/2019/11/23/map/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="HSIANG">
@@ -257,7 +257,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="HSIANG's Blog">
+      <meta itemprop="name" content="HsiangTaipei's Blog">
     </span>
 
     
@@ -267,7 +267,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/11/23/jeedynamicweb/" itemprop="url">建置 dynamic web</a></h1>
+                <a class="post-title-link" href="/2019/11/23/map/" itemprop="url">Java 基本物件：Map、HashMap</a></h1>
         
 
         <div class="post-meta">
@@ -341,7 +341,15 @@
       
         
           
-            
+            <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><p>在 java.util 套件（package）中的 HashMap 類別物件，是常用來存放多組成對資料的物件，每組成對的資料包括 key(索引、鍵值) 及 value(值)</p>
+<h2 id="建立-HashMap"><a href="#建立-HashMap" class="headerlink" title="建立 HashMap"></a>建立 HashMap</h2><p>把 Map、HashMap 當成箱子，放進物品時需要先指定索引，方便後面拿到箱子的人，可以藉由索引取得箱子裡的物品</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Map map = <span class="keyword">new</span> HashMap();</span><br><span class="line">map.put(<span class="string">"name"</span>, <span class="string">"張三"</span>) ;</span><br><span class="line">map.put(<span class="string">"age"</span>, <span class="number">2</span>);</span><br><span class="line">map.put(<span class="string">"city"</span>, <span class="string">"台北"</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="取出-HashMap"><a href="#取出-HashMap" class="headerlink" title="取出 HashMap"></a>取出 HashMap</h2><p>拿到箱子（map）的人，把手伸進箱子，指定索引後可以拿到對應的物品</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//承上範例</span></span><br><span class="line">String name ＝ (String)map.get(<span class="string">"name"</span>) ;</span><br><span class="line">System.out.println(<span class="string">"name : "</span> + name);</span><br></pre></td></tr></table></figure>
+<p>輸出結果</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ name : 張三</span><br></pre></td></tr></table></figure>
+
           
         
       
@@ -398,7 +406,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="HSIANG's Blog">
+      <meta itemprop="name" content="HsiangTaipei's Blog">
     </span>
 
     
@@ -576,7 +584,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">標籤</span>
                 </a>
               </div>
