@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="java,Map,HashMap," />
+  <meta name="keywords" content="java,gson," />
 
 
 
@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="Quick Start在 java.util 套件（package）中的 HashMap 類別物件，是常用來存放多組成對資料的物件，每組成對的資料包括 key(索引、鍵值) 及 value(值) 建立 HashMap把 Map、HashMap 當成箱子，放進物品時需要先指定索引，方便後面拿到箱子的人，可以藉由索引取得箱子裡的物品 1234Map map = new HashMap();map.p">
-<meta name="keywords" content="java,Map,HashMap">
+<meta name="description" content="Quick StartGson（又稱Google Gson）是Google公司發布的一個開放原始碼的Java庫，主要用途為序列化Java物件為JSON字串，或反序列化JSON字串成Java物件。 反序列化用來將符合 JSON 格式的字串，轉換成 Java 的物件（可以是 POJO、Map、List） 1234String jsonString = &quot;&amp;#123;&amp;apos;name&amp;apos;:&amp;apos;張三&amp;apos;&amp;#125;&quot;">
+<meta name="keywords" content="java,gson">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java 基本物件：Map、HashMap">
-<meta property="og:url" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;23&#x2F;map&#x2F;index.html">
+<meta property="og:title" content="Java 常用第三方涵式庫：Gson">
+<meta property="og:url" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;26&#x2F;gson&#x2F;index.html">
 <meta property="og:site_name" content="HsiangTaipei&#39;s Blog">
-<meta property="og:description" content="Quick Start在 java.util 套件（package）中的 HashMap 類別物件，是常用來存放多組成對資料的物件，每組成對的資料包括 key(索引、鍵值) 及 value(值) 建立 HashMap把 Map、HashMap 當成箱子，放進物品時需要先指定索引，方便後面拿到箱子的人，可以藉由索引取得箱子裡的物品 1234Map map = new HashMap();map.p">
+<meta property="og:description" content="Quick StartGson（又稱Google Gson）是Google公司發布的一個開放原始碼的Java庫，主要用途為序列化Java物件為JSON字串，或反序列化JSON字串成Java物件。 反序列化用來將符合 JSON 格式的字串，轉換成 Java 的物件（可以是 POJO、Map、List） 1234String jsonString = &quot;&amp;#123;&amp;apos;name&amp;apos;:&amp;apos;張三&amp;apos;&amp;#125;&quot;">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2019-11-26T01:01:45.359Z">
+<meta property="og:updated_time" content="2019-11-26T01:20:38.746Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="https://hsiangchang.github.io/2019/11/23/map/"/>
+  <link rel="canonical" href="https://hsiangchang.github.io/2019/11/26/gson/"/>
 
 
 
 
 
-  <title>Java 基本物件：Map、HashMap | HsiangTaipei's Blog</title>
+  <title>Java 常用第三方涵式庫：Gson | HsiangTaipei's Blog</title>
   
 
 
@@ -251,7 +251,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hsiangchang.github.io/2019/11/23/map/">
+    <link itemprop="mainEntityOfPage" href="https://hsiangchang.github.io/2019/11/26/gson/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="HSIANG">
@@ -268,7 +268,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java 基本物件：Map、HashMap</h1>
+          <h1 class="post-title" itemprop="name headline">Java 常用第三方涵式庫：Gson</h1>
         
 
         <div class="post-meta">
@@ -280,8 +280,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-11-23T12:46:56+08:00">
-                2019-11-23
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-11-26T09:03:28+08:00">
+                2019-11-26
               </time>
             
 
@@ -303,8 +303,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
                   </a>
                 </span>
 
@@ -340,15 +340,17 @@
       
 
       
-        <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><p>在 java.util 套件（package）中的 HashMap 類別物件，是常用來存放多組成對資料的物件，每組成對的資料包括 key(索引、鍵值) 及 value(值)</p>
-<h2 id="建立-HashMap"><a href="#建立-HashMap" class="headerlink" title="建立 HashMap"></a>建立 HashMap</h2><p>把 Map、HashMap 當成箱子，放進物品時需要先指定索引，方便後面拿到箱子的人，可以藉由索引取得箱子裡的物品</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Map map = <span class="keyword">new</span> HashMap();</span><br><span class="line">map.put(<span class="string">"name"</span>, <span class="string">"張三"</span>) ;</span><br><span class="line">map.put(<span class="string">"age"</span>, <span class="number">2</span>);</span><br><span class="line">map.put(<span class="string">"city"</span>, <span class="string">"台北"</span>);</span><br></pre></td></tr></table></figure>
+        <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><p>Gson（又稱Google Gson）是Google公司發布的一個開放原始碼的Java庫，主要用途為序列化Java物件為JSON字串，或反序列化JSON字串成Java物件。</p>
+<h2 id="反序列化"><a href="#反序列化" class="headerlink" title="反序列化"></a>反序列化</h2><p>用來將符合 JSON 格式的字串，轉換成 Java 的物件（可以是 POJO、Map、List）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String jsonString = <span class="string">"&#123;'name':'張三'&#125;"</span> ; </span><br><span class="line">Gson gson = <span class="keyword">new</span> Gson() ;</span><br><span class="line">Map map = gson.fromJson(jsonString, Map<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">System.out.println(<span class="string">"name : "</span> + map.get(<span class="string">"name"</span>));</span><br></pre></td></tr></table></figure>
 
-<h2 id="取出-HashMap"><a href="#取出-HashMap" class="headerlink" title="取出 HashMap"></a>取出 HashMap</h2><p>拿到箱子（map）的人，把手伸進箱子，指定索引後可以拿到對應的物品</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//承上範例</span></span><br><span class="line">String name ＝ (String)map.get(<span class="string">"name"</span>) ;</span><br><span class="line">System.out.println(<span class="string">"name : "</span> + name);</span><br></pre></td></tr></table></figure>
 <p>輸出結果</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ name : 張三</span><br></pre></td></tr></table></figure>
 
+<h2 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h2><p>用來將 Java 物件轉換成 JSON 字串</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Map map = <span class="keyword">new</span> HashMap();</span><br><span class="line">map.put(<span class="string">"name"</span>, <span class="string">"張三"</span>);</span><br><span class="line">map.put(<span class="string">"age"</span>, <span class="number">20</span>);</span><br><span class="line"></span><br><span class="line">Gson gson = <span class="keyword">new</span> Gson();</span><br><span class="line">String jsonString = gson.toJson(map);</span><br><span class="line">System.out.println(<span class="string">"輸出字串："</span> + jsonString);</span><br></pre></td></tr></table></figure>
+<p>輸出結果</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ 輸出字串：&#123;<span class="string">"name"</span>:<span class="string">"張三"</span>,<span class="string">"age"</span>:20&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -367,9 +369,7 @@
           
             <a href="/tags/java/" rel="tag"># java</a>
           
-            <a href="/tags/Map/" rel="tag"># Map</a>
-          
-            <a href="/tags/HashMap/" rel="tag"># HashMap</a>
+            <a href="/tags/gson/" rel="tag"># gson</a>
           
         </div>
       
@@ -382,8 +382,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/22/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/11/23/map/" rel="next" title="Java 基本物件：Map、HashMap">
+                <i class="fa fa-chevron-left"></i> Java 基本物件：Map、HashMap
               </a>
             
           </div>
@@ -391,10 +391,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/11/26/gson/" rel="prev" title="Java 常用第三方涵式庫：Gson">
-                Java 常用第三方涵式庫：Gson <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -526,7 +522,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建立-HashMap"><span class="nav-number">2.</span> <span class="nav-text">建立 HashMap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#取出-HashMap"><span class="nav-number">3.</span> <span class="nav-text">取出 HashMap</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反序列化"><span class="nav-number">2.</span> <span class="nav-text">反序列化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#序列化"><span class="nav-number">3.</span> <span class="nav-text">序列化</span></a></li></ol></div>
             
 
           </div>
