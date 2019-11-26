@@ -342,16 +342,18 @@
         
           
             <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><p>Gson（又稱Google Gson）是Google公司發布的一個開放原始碼的Java庫，主要用途為序列化Java物件為JSON字串，或反序列化JSON字串成Java物件。</p>
+<h2 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h2><p>用來將 Java 物件轉換成 JSON 字串</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Map map = <span class="keyword">new</span> HashMap();</span><br><span class="line">map.put(<span class="string">"name"</span>, <span class="string">"張三"</span>);</span><br><span class="line">map.put(<span class="string">"age"</span>, <span class="number">20</span>);</span><br><span class="line"></span><br><span class="line">Gson gson = <span class="keyword">new</span> Gson();</span><br><span class="line">String jsonString = gson.toJson(map);</span><br><span class="line">System.out.println(<span class="string">"輸出字串："</span> + jsonString);</span><br></pre></td></tr></table></figure>
+<p>輸出結果</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ 輸出字串：&#123;<span class="string">"name"</span>:<span class="string">"張三"</span>,<span class="string">"age"</span>:20&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="反序列化"><a href="#反序列化" class="headerlink" title="反序列化"></a>反序列化</h2><p>用來將符合 JSON 格式的字串，轉換成 Java 的物件（可以是 POJO、Map、List）</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String jsonString = <span class="string">"&#123;'name':'張三'&#125;"</span> ; </span><br><span class="line">Gson gson = <span class="keyword">new</span> Gson() ;</span><br><span class="line">Map map = gson.fromJson(jsonString, Map<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">System.out.println(<span class="string">"name : "</span> + map.get(<span class="string">"name"</span>));</span><br></pre></td></tr></table></figure>
 
 <p>輸出結果</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ name : 張三</span><br></pre></td></tr></table></figure>
 
-<h2 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h2><p>用來將 Java 物件轉換成 JSON 字串</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Map map = <span class="keyword">new</span> HashMap();</span><br><span class="line">map.put(<span class="string">"name"</span>, <span class="string">"張三"</span>);</span><br><span class="line">map.put(<span class="string">"age"</span>, <span class="number">20</span>);</span><br><span class="line"></span><br><span class="line">Gson gson = <span class="keyword">new</span> Gson();</span><br><span class="line">String jsonString = gson.toJson(map);</span><br><span class="line">System.out.println(<span class="string">"輸出字串："</span> + jsonString);</span><br></pre></td></tr></table></figure>
-<p>輸出結果</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ 輸出字串：&#123;<span class="string">"name"</span>:<span class="string">"張三"</span>,<span class="string">"age"</span>:20&#125;</span><br></pre></td></tr></table></figure>
+
           
         
       
