@@ -79,17 +79,19 @@
 
 
 
-<meta name="description" content="前言maven 是一個管理第三方涵式庫、自動構建的工具；在這裡記錄如何使用 maven 建置簡單的 java web 專案。 建立專案1. 在工作區按右鍵，選擇 new &amp;gt; maven project 2. 勾選上方的 Create a simple project 3. 填寫 Group Id 及 Article Id ，並選擇 packaging 為 war 後即完成 指定伺服器1. 在">
+<meta name="description" content="前言maven 是一個管理第三方涵式庫、自動構建的工具；在這裡記錄如何使用 maven 建置簡單的 java web 專案。 建立專案1. 在工作區按右鍵，選擇 new &amp;gt; maven project 2. 勾選上方的 Create a simple project 3. 填寫 Group Id 及 Article Id ，並選擇 packaging 為 war 後即完成 3. 建置的 po">
 <meta name="keywords" content="java,maven,web">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用 Maven 建立 Web 專案">
 <meta property="og:url" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;index.html">
 <meta property="og:site_name" content="HsiangTaipei&#39;s Blog">
-<meta property="og:description" content="前言maven 是一個管理第三方涵式庫、自動構建的工具；在這裡記錄如何使用 maven 建置簡單的 java web 專案。 建立專案1. 在工作區按右鍵，選擇 new &amp;gt; maven project 2. 勾選上方的 Create a simple project 3. 填寫 Group Id 及 Article Id ，並選擇 packaging 為 war 後即完成 指定伺服器1. 在">
+<meta property="og:description" content="前言maven 是一個管理第三方涵式庫、自動構建的工具；在這裡記錄如何使用 maven 建置簡單的 java web 專案。 建立專案1. 在工作區按右鍵，選擇 new &amp;gt; maven project 2. 勾選上方的 Create a simple project 3. 填寫 Group Id 及 Article Id ，並選擇 packaging 為 war 後即完成 3. 建置的 po">
 <meta property="og:locale" content="zh-tw">
 <meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;001.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;002.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;003.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;012.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;013.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;004.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;005.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;006.png">
@@ -98,7 +100,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;009.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;011.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;010.png">
-<meta property="og:updated_time" content="2019-11-27T03:14:48.826Z">
+<meta property="og:updated_time" content="2019-11-27T03:26:31.110Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;001.png">
 
@@ -356,6 +358,11 @@
 <h2 id="建立專案"><a href="#建立專案" class="headerlink" title="建立專案"></a>建立專案</h2><p><strong>1. 在工作區按右鍵，選擇 new &gt; maven project</strong><br><img src="/2019/11/27/mavenwebapp/001.png" alt></p>
 <p><strong>2. 勾選上方的 Create a simple project</strong><br><img src="/2019/11/27/mavenwebapp/002.png" alt></p>
 <p><strong>3. 填寫 <font color="blue">Group Id</font> 及 <font color="blue">Article Id</font> ，並選擇 <font color="blue">packaging</font> 為 <font color="blue">war</font> 後即完成</strong><br><img src="/2019/11/27/mavenwebapp/003.png" alt></p>
+<p><strong>3. 建置的 pom.xml 檔會有錯誤訊息如下</strong><br><img src="/2019/11/27/mavenwebapp/012.png" alt></p>
+<p><strong>4. 加入以下程式碼到 pom.xml 內</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-war-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">failOnMissingWebXml</span>&gt;</span>false<span class="tag">&lt;/<span class="name">failOnMissingWebXml</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>5. 加入完成後如下圖</strong><br><img src="/2019/11/27/mavenwebapp/013.png" alt></p>
 <h2 id="指定伺服器"><a href="#指定伺服器" class="headerlink" title="指定伺服器"></a>指定伺服器</h2><p><strong>1. 在專案按右鍵，Properties</strong><br><img src="/2019/11/27/mavenwebapp/004.png" alt></p>
 <p><strong>2. 選擇 Targeted Runtimes 後，設定完成</strong><br><img src="/2019/11/27/mavenwebapp/005.png" alt></p>
 <h2 id="建立第一支程式"><a href="#建立第一支程式" class="headerlink" title="建立第一支程式"></a>建立第一支程式</h2><p><strong>1. 在 java 目錄按右鍵，選擇 New &gt; Other</strong><br><img src="/2019/11/27/mavenwebapp/006.png" alt></p>
