@@ -267,7 +267,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/11/27/mavenwebapp/" itemprop="url">mavenwebapp</a></h1>
+                <a class="post-title-link" href="/2019/11/27/mavenwebapp/" itemprop="url">使用 Maven 建立 Web 專案</a></h1>
         
 
         <div class="post-meta">
@@ -289,6 +289,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/maven/" itemprop="url" rel="index">
+                    <span itemprop="name">maven</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -319,7 +341,19 @@
       
         
           
-            <p><img src="/2019/11/27/mavenwebapp/001.png" alt></p>
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>maven 是一個管理第三方涵式庫、自動構建的工具；在這裡記錄如何使用 maven 建置簡單的 java web 專案。</strong></p>
+<h2 id="建立專案"><a href="#建立專案" class="headerlink" title="建立專案"></a>建立專案</h2><p><strong>1. 在工作區按右鍵，選擇 new &gt; maven project</strong><br><img src="/2019/11/27/mavenwebapp/001.png" alt></p>
+<p><strong>2. 勾選上方的 Create a simple project</strong><br><img src="/2019/11/27/mavenwebapp/002.png" alt></p>
+<p><strong>3. 填寫 <font color="blue">Group Id</font> 及 <font color="blue">Article Id</font> ，並選擇 <font color="blue">packaging</font> 為 <font color="blue">war</font> 後即完成</strong><br><img src="/2019/11/27/mavenwebapp/003.png" alt></p>
+<h2 id="指定伺服器"><a href="#指定伺服器" class="headerlink" title="指定伺服器"></a>指定伺服器</h2><p><strong>1. 在專案按右鍵，Properties</strong><br><img src="/2019/11/27/mavenwebapp/004.png" alt></p>
+<p><strong>2. 選擇 Targeted Runtimes 後，設定完成</strong><br><img src="/2019/11/27/mavenwebapp/005.png" alt></p>
+<h2 id="建立第一支程式"><a href="#建立第一支程式" class="headerlink" title="建立第一支程式"></a>建立第一支程式</h2><p><strong>1. 在 java 目錄按右鍵，選擇 New &gt; Other</strong><br><img src="/2019/11/27/mavenwebapp/006.png" alt></p>
+<p><strong>2. 選擇一般的 class 即可</strong><br><img src="/2019/11/27/mavenwebapp/007.png" alt></p>
+<p><strong>3. 填寫 package 及 Name 二個欄位</strong><br><img src="/2019/11/27/mavenwebapp/008.png" alt></p>
+<h2 id="執行第一支程式"><a href="#執行第一支程式" class="headerlink" title="執行第一支程式"></a>執行第一支程式</h2><p><strong>1. 選擇使用 Run As &gt; Run on Server</strong></p>
+<p><img src="/2019/11/27/mavenwebapp/009.png" alt></p>
+<p><strong>2. 在 Console 下看到以下訊息即為啟動完成</strong><br><img src="/2019/11/27/mavenwebapp/011.png" alt></p>
+<h2 id="執行結果"><a href="#執行結果" class="headerlink" title="執行結果"></a>執行結果</h2><p><strong>1. 在 URL 上填入 <a href="http://localhost:8080/mvc/hello" target="_blank" rel="noopener">http://localhost:8080/mvc/hello</a>，即可看到測試結果</strong><br><img src="/2019/11/27/mavenwebapp/010.png" alt></p>
 
           
         
@@ -846,7 +880,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分類</span>
                 </a>
               </div>
@@ -857,7 +891,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">標籤</span>
                 </a>
               </div>
