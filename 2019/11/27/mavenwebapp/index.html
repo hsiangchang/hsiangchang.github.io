@@ -79,28 +79,29 @@
 
 
 
-<meta name="description" content="前言maven 是一個管理第三方涵式庫、自動構建的工具；在這裡記錄如何使用 maven 建置簡單的 java web 專案。 建立專案1. 在工作區按右鍵，選擇 new &amp;gt; maven project 2. 勾選上方的 Create a simple project 3. 填寫 Group Id 及 Article Id ，並選擇 packaging 為 war 後即完成 3. 建置的 po">
+<meta name="description" content="前言maven 是一個管理第三方涵式庫、自動構建的工具；在這裡記錄如何使用 maven 建置簡單的 java web 專案。 建立專案1. 在工作區按右鍵，選擇 new &amp;gt; maven project2. 勾選上方的 Create a simple project 3. 填寫 Group Id 及 Article Id ，並選擇 packaging 為 war 後即完成 3. 建置的 pom">
 <meta name="keywords" content="Java,Maven,Web">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用 Maven 建立 Web 專案（使用外部 Tomcat 執行）">
 <meta property="og:url" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;index.html">
-<meta property="og:site_name" content="HsiangTaipei&#39;s Blog">
-<meta property="og:description" content="前言maven 是一個管理第三方涵式庫、自動構建的工具；在這裡記錄如何使用 maven 建置簡單的 java web 專案。 建立專案1. 在工作區按右鍵，選擇 new &amp;gt; maven project 2. 勾選上方的 Create a simple project 3. 填寫 Group Id 及 Article Id ，並選擇 packaging 為 war 後即完成 3. 建置的 po">
+<meta property="og:site_name" content="Hsiang&#39;s Note">
+<meta property="og:description" content="前言maven 是一個管理第三方涵式庫、自動構建的工具；在這裡記錄如何使用 maven 建置簡單的 java web 專案。 建立專案1. 在工作區按右鍵，選擇 new &amp;gt; maven project2. 勾選上方的 Create a simple project 3. 填寫 Group Id 及 Article Id ，並選擇 packaging 為 war 後即完成 3. 建置的 pom">
 <meta property="og:locale" content="zh-tw">
 <meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;001.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;002.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;003.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;012.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;013.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;004.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;005.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;006.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;007.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;008.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;009.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;011.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;010.png">
-<meta property="og:updated_time" content="2020-09-01T09:48:31.563Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;011.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;012.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;013.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;014.png">
+<meta property="og:updated_time" content="2020-09-08T02:54:11.517Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;hsiangchang.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;mavenwebapp&#x2F;001.png">
 
@@ -138,7 +139,7 @@
 
 
 
-  <title>使用 Maven 建立 Web 專案（使用外部 Tomcat 執行） | HsiangTaipei's Blog</title>
+  <title>使用 Maven 建立 Web 專案（使用外部 Tomcat 執行） | Hsiang's Note</title>
   
 
 
@@ -168,12 +169,12 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">HsiangTaipei's Blog</span>
+        <span class="site-title">Hsiang's Note</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle">老軟工的學習軌跡</p>
+        <p class="site-subtitle">軟體打雜工的學習軌跡</p>
       
   </div>
 
@@ -274,7 +275,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="HsiangTaipei's Blog">
+      <meta itemprop="name" content="Hsiang's Note">
     </span>
 
     
@@ -355,26 +356,25 @@
 
       
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>maven 是一個管理第三方涵式庫、自動構建的工具；在這裡記錄如何使用 maven 建置簡單的 java web 專案。</strong></p>
-<h2 id="建立專案"><a href="#建立專案" class="headerlink" title="建立專案"></a>建立專案</h2><p><strong>1. 在工作區按右鍵，選擇 new &gt; maven project</strong><br><img src="/2019/11/27/mavenwebapp/001.png" alt></p>
-<p><strong>2. 勾選上方的 Create a simple project</strong><br><img src="/2019/11/27/mavenwebapp/002.png" alt></p>
-<p><strong>3. 填寫 <font color="blue">Group Id</font> 及 <font color="blue">Article Id</font> ，並選擇 <font color="blue">packaging</font> 為 <font color="blue">war</font> 後即完成</strong><br><img src="/2019/11/27/mavenwebapp/003.png" alt></p>
-<p><strong>3. 建置的 pom.xml 檔會有錯誤訊息如下</strong><br><img src="/2019/11/27/mavenwebapp/012.png" alt></p>
+<h2 id="建立專案"><a href="#建立專案" class="headerlink" title="建立專案"></a>建立專案</h2><p><strong>1. 在工作區按右鍵，選擇 new &gt; maven project</strong><br><img src="/2019/11/27/mavenwebapp/001.png" alt><br><img src="/2019/11/27/mavenwebapp/002.png" alt><br><strong>2. 勾選上方的 Create a simple project</strong><br><img src="/2019/11/27/mavenwebapp/003.png" alt></p>
+<p><strong>3. 填寫 <font color="blue">Group Id</font> 及 <font color="blue">Article Id</font> ，並選擇 <font color="blue">packaging</font> 為 <font color="blue">war</font> 後即完成</strong><br><img src="/2019/11/27/mavenwebapp/004.png" alt></p>
+<p><strong>3. 建置的 pom.xml 檔會有錯誤訊息如下</strong><br><img src="/2019/11/27/mavenwebapp/005.png" alt></p>
 <p><strong>4. 加入以下程式碼到 pom.xml 內</strong></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-war-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">failOnMissingWebXml</span>&gt;</span>false<span class="tag">&lt;/<span class="name">failOnMissingWebXml</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>5. 加入完成後如下圖</strong><br><img src="/2019/11/27/mavenwebapp/013.png" alt></p>
-<h2 id="指定伺服器"><a href="#指定伺服器" class="headerlink" title="指定伺服器"></a>指定伺服器</h2><p><strong>1. 在專案按右鍵，Properties</strong><br><img src="/2019/11/27/mavenwebapp/004.png" alt></p>
-<p><strong>2. 選擇 Targeted Runtimes 後，設定完成</strong><br><img src="/2019/11/27/mavenwebapp/005.png" alt></p>
-<h2 id="建立第一支程式"><a href="#建立第一支程式" class="headerlink" title="建立第一支程式"></a>建立第一支程式</h2><p><strong>1. 在 java 目錄按右鍵，選擇 New &gt; Other</strong><br><img src="/2019/11/27/mavenwebapp/006.png" alt></p>
-<p><strong>2. 選擇一般的 class 即可</strong><br><img src="/2019/11/27/mavenwebapp/007.png" alt></p>
-<p><strong>3. 填寫 package 及 Name 二個欄位</strong><br><img src="/2019/11/27/mavenwebapp/008.png" alt></p>
+<p><strong>5. 加入完成後如下圖</strong><br><img src="/2019/11/27/mavenwebapp/006.png" alt></p>
+<h2 id="指定伺服器"><a href="#指定伺服器" class="headerlink" title="指定伺服器"></a>指定伺服器</h2><p><strong>1. 在專案按右鍵，Properties</strong><br><img src="/2019/11/27/mavenwebapp/007.png" alt></p>
+<p><strong>2. 選擇 Targeted Runtimes 後，設定完成</strong><br><img src="/2019/11/27/mavenwebapp/008.png" alt></p>
+<h2 id="建立第一支程式"><a href="#建立第一支程式" class="headerlink" title="建立第一支程式"></a>建立第一支程式</h2><p><strong>1. 在 java 目錄按右鍵，選擇 New &gt; Other</strong><br><img src="/2019/11/27/mavenwebapp/009.png" alt></p>
+<p><strong>2. 選擇一般的 class 即可</strong><br><img src="/2019/11/27/mavenwebapp/010.png" alt></p>
+<p><strong>3. 填寫 package 及 Name 二個欄位</strong><br><img src="/2019/11/27/mavenwebapp/011.png" alt></p>
 <p>**4. 撰寫程式內容</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.mvc;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.WebServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet</span>(<span class="string">"/hello"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> </span></span><br><span class="line"><span class="function">            <span class="keyword">throws</span> IOException, ServletException </span>&#123;</span><br><span class="line">	  response.getWriter().write(<span class="string">"hello"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="執行第一支程式"><a href="#執行第一支程式" class="headerlink" title="執行第一支程式"></a>執行第一支程式</h2><p><strong>1. 選擇使用 Run As &gt; Run on Server</strong></p>
-<p><img src="/2019/11/27/mavenwebapp/009.png" alt></p>
-<p><strong>2. 在 Console 下看到以下訊息即為啟動完成</strong><br><img src="/2019/11/27/mavenwebapp/011.png" alt></p>
-<h2 id="執行結果"><a href="#執行結果" class="headerlink" title="執行結果"></a>執行結果</h2><p><strong>1. 在 URL 上填入 <a href="http://localhost:8080/mvc/hello" target="_blank" rel="noopener">http://localhost:8080/mvc/hello</a>，即可看到測試結果</strong><br><img src="/2019/11/27/mavenwebapp/010.png" alt></p>
+<p><img src="/2019/11/27/mavenwebapp/012.png" alt></p>
+<p><strong>2. 在 Console 下看到以下訊息即為啟動完成</strong><br><img src="/2019/11/27/mavenwebapp/013.png" alt></p>
+<h2 id="執行結果"><a href="#執行結果" class="headerlink" title="執行結果"></a>執行結果</h2><p><strong>1. 在 URL 上填入 <a href="http://localhost:8080/mvc/hello" target="_blank" rel="noopener">http://localhost:8080/mvc/hello</a>，即可看到測試結果</strong><br><img src="/2019/11/27/mavenwebapp/014.png" alt></p>
 
       
     </div>
